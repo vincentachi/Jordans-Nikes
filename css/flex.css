@@ -1,0 +1,79 @@
+html{
+    margin:0;
+    padding:0;
+    text-align:center;
+    box-sizing: content-box;
+}
+:root {
+    --main-color-1: black;
+    --main-color-2: yellow;
+    --main-color-3: white;
+    --main-color-4: gray;
+  }
+.chaussures-block{
+    display: flex;
+    flex-wrap: wrap;
+}
+.chaussure {
+    background-color: var(--main-color-3); 
+    position: relative;
+    width: calc(100% / 3);
+}
+.chaussure img {
+    width: 100%;
+    filter: grayscale();  
+    scale: 0.9;
+    transition: all 1s;
+}
+.chaussure p{ 
+    padding:0.5rem;
+    font-family:Bree Serif;
+    position: absolute; 
+    font-size: 1.5rem;
+    color:var(--main-color-1);
+    background-color: var(--main-color-2);
+    box-shadow: 5px 5px var(--main-color-1);
+}
+.prix-chaussure{
+    display:flex;
+    align-items:center;
+    transform: rotate(-0.03turn);
+    z-index: 50; 
+    top: 2%;
+    left: 2%;
+    border-radius: 50%;
+    aspect-ratio: 1/1;  
+}
+.nom-chaussure{
+    transform: rotate(0.02turn);
+    z-index: 1;
+    top: 2%;
+    left: 30%;
+}
+.chaussure img:hover{
+    filter: none;
+    scale: 1;
+}
+@media screen and (max-width:996px) {
+
+    .chaussure {
+
+        width: calc(100% / 2);
+}
+}
+@media screen and (max-width:768px) {
+    .chaussure {
+
+        width: calc(100%);
+}
+.prix-chaussure{
+    scale:1.5;
+    top: 5%;
+    left: 9%;
+}
+.nom-chaussure{
+    scale:1.5;
+    top:5%;
+    left:40%;
+}
+}

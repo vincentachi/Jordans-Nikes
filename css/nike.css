@@ -1,0 +1,35 @@
+body{
+    margin:0;
+    padding:0;
+    text-align:center;
+    box-sizing: content-box;
+}
+:root {
+    --main-color-1: black;
+    --main-color-2: yellow;
+    --main-color-3: white;
+    --main-color-4: gray;
+  }
+.image-wall{
+    height:50vh;
+    background-image: url("/images/wall.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.promo{
+    background-color: var(--main-color-2);
+    color: var(--main-color-1);
+    margin:0; 
+    font-family:Bree Serif;
+    font-size: 1.5rem;
+    padding: 0.01rem;
+}
+@media screen and (max-width:996px) {
+    .image-wall{
+        display: none;
+    }
+    .promo{
+        font-size:1rem;
+        padding:none;
+    }
+}
